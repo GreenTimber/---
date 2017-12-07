@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>与焰同行</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/i-produce.js"></script>
+<script src="js/nav.js"></script>
+<link href="css/navshow2.css" rel="stylesheet" />
+<link href="css/mubu.css" rel="stylesheet" />
+<style type="text/css">
+ #icon{
+	text-align:center;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+  #iconm{
+	text-align:center;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#iconm:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+ 
+
+ 
+ 
+ @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.TTF') format('truetype');
+   }
+ .ppsy{
+   width:300px;height:300px;
+		margin:0 auto;
+		text-align:center;
+		margin-top:50px;
+		margin-bottom:78px;
+   }
+   
+   
+ #z {
+ text-align:center;
+ width:50px;
+ font-family:fzqk;
+ word-wrap:break-word;
+ letter-spacing:50px;
+ margin:0 auto;
+ margin-top:50px;
+ font-size:16pt;
+ }
+ 
+ #t{
+  margin:0 auto;
+ text-align:center;
+ width:30px;height:300px;
+ font-family:fzqk;
+ word-wrap:break-word;
+ letter-spacing:80px;
+ font-size:24pt;
+ color:#525B41;
+ float:right;margin-left:20px;
+ }
+ 
+ #c{
+ margin:0 auto;
+ width:150px;height:100px;
+ text-align:center;
+ font-family:fzqk;
+ margin-top:0px;
+ 
+ }
+
+
+
+ .p0
+{
+	position:relative;
+	animation:mymove1 2s infinite;
+	animation-iteration-count:1;
+}
+ 
+ .p1
+{
+	position:relative;
+	animation:mymove1 2s infinite;
+	animation-iteration-count:1;
+}
+.p2
+{
+	position:relative;
+	animation:mymove2 2s infinite;
+	animation-iteration-count:1;
+}
+.p3
+{
+	position:relative;
+	animation:mymove3 2s infinite;
+	animation-iteration-count:1;
+}
+.p4
+{
+	position:relative;
+	animation:mymove4 2s infinite;
+	animation-iteration-count:1;
+}
+.p5
+{
+	position:relative;
+	animation:mymove5 2s infinite;
+	animation-iteration-count:1;
+}
+.p6
+{
+	position:relative;
+	animation:mymove6 2s infinite;
+	animation-iteration-count:1;
+}
+ .p7
+{
+	position:relative;
+	animation:mymove7 2s infinite;
+	animation-iteration-count:1;
+}
+ @keyframes mymove0
+{
+	from {top:100px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+ @keyframes mymove1
+{
+	from {top:100px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove2
+{
+	from {top:150px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove3
+{
+	from {top:200px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove4
+{
+	from {top:250px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove5
+{
+	from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove6
+{
+	from {top:350px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove7
+{
+	from {bottom:-350px;opacity: 0;}
+	to {bottom:0px;opacity: 1;}
+	
+}
+a:link { text-decoration: none;color: black} 
+a:active { text-decoration:none;color:black} 
+a:hover { text-decoration:none;color: black} 
+a:visited { text-decoration: none;color: black} 
+body{
+
+}
+
+.yinghao{
+ writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+	  height: 15px;
+	  margin-right: 30px; 
+}
+
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg2.jpg') no-repeat center center;
+} 
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+
+
+
+</style>
+<script type="text/javascript">
+function btcmove(a){
+
+ var obj=document.getElementById("btc");
+			obj.style.transition="All 0.4s ease-in-out";
+		    obj.style.webkitTransform="translateX(15px) scale(1.1)";
+			
+ var objicon=document.getElementById("icon");
+			objicon.style.transition="0.5s ease-out";
+            objicon.style.webkitTransform="scale(1.1)";
+}
+function btcout(a){
+var obj=document.getElementById("btc");
+			obj.style.transition="All 0.4s ease-in-out";
+           obj.style.webkitTransform="translateX(0px)";
+		   
+var objicon=document.getElementById("icon");
+		objicon.style.transition="0.5s ease-out";
+		objicon.style.webkitTransform="scale(1.0)";
+
+}
+function btcmove1(a){
+
+ var obj=document.getElementById("btc1");
+			obj.style.transition="All 0.4s ease-in-out";
+			 obj.style.webkitTransform="translateX(15px) scale(1.1)";
+			  var objicon=document.getElementById("icon1");
+			objicon.style.transition="0.5s ease-out";
+            objicon.style.webkitTransform="scale(1.1)";
+            
+}
+function btcout1(a){
+var obj=document.getElementById("btc1");
+			obj.style.transition="All 0.4s ease-in-out";
+           obj.style.webkitTransform="translateX(0px)";
+		   var objicon=document.getElementById("icon1");
+		objicon.style.transition="0.5s ease-out";
+		objicon.style.webkitTransform="scale(1.0)";
+
+}
+</script>
+</head>
+<body  >
+<div id="background">
+<div class="bg-photo bg-photo-1" style="display: block;">
+
+<div id="i-total" >
+<div style="margin:0px auto;width:132px;height:93px;margin-top:160px;">
+<img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+
+<div class="ppsy">
+<div class="p0" id="z" style="float:left;">尘焰期待与你相遇<span class="yinghao">…</span><span class="yinghao">…</span></div>
+<div class="p0" id="z" style="float:left;">我们携手抵达心灵的自由︐</div>
+<div class="p0" id="z" style="float:left;">本着传播美好幸福生活的初心︐</div>
+<div class="p0" id="z" style="float:left;">保持近善尽美的初衷︒</div>
+<div class="p0" id="z" style="float:left;">关注当下文化︑生活︐</div>
+<div  id="t" class="p0">与焰同行</div>
+</div>
+
+
+
+<div id="c" class="p0" ><a href="hydl.html" onmousemove="btcmove(this)" onmouseout="btcout(this)"><div id="iconm" style="float:left;" >
+<img  src="images/ldbutton.png" ></img>
+</div><div id="btc" style="float:right;margin-top:50px;font-size:14pt;">会员登录</div></a></div>
+
+
+
+
+
+<div id="c" class="p0" ><a href="hyjs.html" onmousemove="btcmove1(this)" onmouseout="btcout1(this)"><div id="iconm" style="float:left;" >
+<img  src="images/ldbutton.png" ></img>
+</div><div id="btc1" style="float:right;margin-top:50px;font-size:14pt;">会员介绍</div></a></div>
+
+
+
+
+</div>
+
+<!--幕布界面><-->
+ <div id="mubusf">
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+  </div>
+ <!--幕布界面><-->	
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+
+
+
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>闻心</title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/i-produce.js"></script>
+   <link href="css/navshow2.css" rel="stylesheet" />
+   <link href="css/mubu.css" rel="stylesheet" />
+<script src="js/nav.js"></script>
+<link href="" rel="stylesheet" />
+<script src=""></script>
+<style type="text/css">
+
+ #icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+  #icon2{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute;
+	left:50%;
+	bottom:70px;
+	margin:-100px 0px 0px -40px;
+	opacity:0.5;
+}
+#icon2:hover {   
+opacity:1;
+ }
+
+ .p1
+{
+	position:relative;
+	animation:mymove1 2s infinite;
+	animation-iteration-count:1;
+}
+.p2
+{
+	position:relative;
+	animation:mymove2 2s infinite;
+	animation-iteration-count:1;
+}
+.p3
+{
+	position:relative;
+	animation:mymove3 2s infinite;
+	animation-iteration-count:1;
+}
+.p4
+{
+	position:relative;
+	animation:mymove4 2s infinite;
+	animation-iteration-count:1;
+}
+.p5
+{
+	position:relative;
+	animation:mymove5 2s infinite;
+	animation-iteration-count:1;
+}
+.p6
+{
+	position:relative;
+	animation:mymove6 2s infinite;
+	animation-iteration-count:1;
+}
+ @keyframes mymove1
+{
+	from {top:100px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove2
+{
+	from {top:150px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove3
+{
+	from {top:200px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove4
+{
+	from {top:250px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove5
+{
+	from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove6
+{
+	from {top:350px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+
+
+ @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.eot');
+      src: url('fonts/fzqk.eot?#iefix') format('embedded-opentype'),
+         
+	       url('fonts/fzqk.TTF') format('truetype'),
+	       url('fonts/fzqk.svg#SingleMaltaRegular') format('svg');
+   }
+body{
+
+}  
+p{ margin-top:3px;
+   margin-bottom:3px; 
+}
+ 
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg-wenxins.gif') no-repeat center center;
+} 
+
+
+#background .bg-photo-2 
+{ 
+   background:url('images/sp-wenxin.png') no-repeat center center;
+} 
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+#title{
+   margin-top:30px;
+	width:100%;
+
+}
+#title .text{
+    width:30px;
+	font-size:20pt;
+	font-family:fzqk;
+	z-index:20;
+	text-align:center;
+    margin:0 auto;
+}
+#title .ren{
+    width:30px;
+    margin:0 auto;
+
+}
+
+#content{
+   position: absolute;  bottom: 26%; 
+   left:9%;
+   font-family:fzqk;
+   font-size:19px;
+
+}
+
+#content .text{
+   width:325px;
+
+}
+ #z {
+ text-align:center;
+ width:23px;
+ font-family:fzqk;
+ word-wrap:break-word;
+ letter-spacing:30px;
+ font-size:15pt;
+ 
+
+    
+	
+ }
+#pps{ width:100%;height:450px;margin-top:140px;}
+#pps .ppsy{
+        width:1500px;height:450px;
+		margin:0 auto;
+		 font-family:fzqk;
+	
+	
+   }
+#pps .part1{float:left;width:13%;height:100%;  }
+#pps .part2{float:left;width:9%;height:100%;  }
+#pps .part3{float:left;width:7%;height:100%; }
+#pps .part4{float:left;width:33%;height:100%;  }
+#pps .part5{float:left;width:12%;height:100%;  }
+#pps .part6{float:left;width:13%;height:100%;  }
+#pps .part7{float:left;width:11%;height:100%; }    
+#pps .text2{margin-right:28%;}
+#pps .text3{margin-right:25%;}
+#pps .text5{margin-right:30%;}
+#pps .text6{margin-right:31%;}
+#pps .text7{margin-right:8%;}
+
+.yinghao{
+ writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+	  height: 15px;
+}
+</style>
+
+
+
+</head>
+
+<body>
+<div id="background">
+
+<div class="bg-photo bg-photo-1" style="display: block;">
+<div class="bg-photo bg-photo-2" style="display: block;">
+<div id="p-total" >	
+ <div id="title">
+			<div class="text">闻心</div><br>
+			<div class="ren"><img src="images/shui.png"></div>
+			
+		</div>
+</div>
+		
+<div id="pps">	
+<div class="ppsy">		
+		
+<div  class="part1" ></div>
+<div  class="part2">
+<div class="text2">
+<div class="p1" id="z" style="float:right;"><span class="yinghao">“</span>灵心胜造物︐妙手夺天工︒<span class="yinghao">”</span></div>
+<div class="p1" id="z" style="float:right;">每一件︻闻 心︼系列的工艺品</div>
+<div class="p1" id="z" style="float:right;">都是国家著名雕刻大师精妙构思︐</div>
+<div class="p1" id="z" style="float:right;">经数月精雕细琢︐才能瞬间惊艳四座</div>
+</div>
+</div>
+<div  class="part3">
+<div class="text3">
+<div class="p1" id="z" style="float:right;">行刀运凿︐简练洒脱、清晰流畅︐</div>
+<div class="p1" id="z" style="float:right;">是百年世家的积淀与传承︐琢磨出一种</div>
+<div class="p1" id="z" style="float:right;">远离喧嚣的淡然与隽永︒</div>
+</div>
+</div>
+<div  class="part4" style="margin-right: 20px;"></div>
+<div  class="part5">
+<div class="text5">
+<div class="p1" id="z" style="float:right;">由外向内·循序渐进︐</div>
+<div class="p1" id="z" style="float:right;">将老子出关的景致神韵渐渐刻出︐</div>
+<div class="p1" id="z" style="float:right;">蜜蜡的雕痕︐光滑与粗糙。生灵活现︐</div>
+<div class="p1" id="z" style="float:right;">光阴下交错重叠︐</div>
+<div class="p1" id="z" style="float:right;">尘焰与匠心的邂逅︒</div>
+</div>
+</div>
+<div  class="part6">
+<div class="text6">
+<div class="p1" id="z" style="float:right;"><span class="yinghao">“</span>日出东方︐紫气东来<span class="yinghao">”</span></div>
+<div class="p1" id="z" style="float:right;">老子骑青牛神情自然︐缓缓而行︐</div>
+<div class="p1" id="z" style="float:right;">而此处祥云缭绕︐松木繁茂︐泉水叮咚︑仙鹤腾飞︒</div>
+<div class="p1" id="z" style="float:right;"><span class="yinghao">“</span>道可道︐非常道︐宇宙造物︐天地之始︒</div>
+<div class="p1" id="z" style="float:right;">万物之母︐欲观其妙︐常有也<span class="yinghao">…</span><span class="yinghao">…</span></div>
+</div>
+
+</div>
+<div  class="part7">
+<div class="text7">
+<div class="p1" id="z" style="float:right;">三十六把刻刀</div>
+<div class="p1" id="z" style="float:right;">三百六十多个小时的勾勒描绘︐</div>
+<div class="p1" id="z" style="float:right;">七百二十多个小时的精琢细磨︒</div>
+<div class="p1" id="z" style="float:right;">两千五百多克的巨型蜜蜡原石︐</div>
+<div class="p1" id="z" style="float:right;">蜕变为一千零八十克的</div>
+<div class="p1" id="z" style="float:right;">︷老子出关︸</div>
+</div>
+</div>
+
+
+		
+</div>
+</div>		
+ 		
+<!--幕布界面><-->	
+<div id="mubusf">
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+  </div>
+ <!--幕布界面><-->			
+		
+
+		
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+	<!--中间><-->		
+		<div id="icon2">
+					<div class="ico"><a href="wx.html"><img src="images/ldbutton.png" width="60%" height="60%"></a></div>
+		</div>	
+		
+</div>
+
+</div>
+</div>
+</body>
+</html>

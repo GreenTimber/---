@@ -1,0 +1,46 @@
+
+#rightlogo2{
+position:absolute;
+width:400px;height:20px;
+left:100px;bottom:28px;
+ z-index:100;
+}
+#logo2{
+width:78px;height:55px;
+float:right
+}
+
+ #navpic2{
+
+ float:left;
+ width:435px;
+ height:100px;
+ }
+ #nav2{
+
+  cursor:pointer;
+  float:left;
+  width:15px;
+  height:15px;
+ transform":"rotate(180deg);
+ -o-transform":"rotate(180deg);
+ -ms-transform":"rotate(180deg);
+ -moz-transform":"rotate(18deg);
+ -webkit-transform": "rotate(180deg);
+
+ }
+
+#navshow2{
+
+float:right;
+width:400px;height:30px;
+font-family:fzqk;
+
+
+font-size:12pt;
+opacity: 0;
+}
+#navshow2 a:link { text-decoration: none;color: #000000} 
+#navshow2 a:active { text-decoration:none;color:#000000} 
+#navshow2 a:hover { text-decoration:none;color: #000000} 
+#navshow2 a:visited { text-decoration: none;color: #000000} 

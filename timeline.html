@@ -1,0 +1,1027 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="GBK">
+<title>时间</title>
+
+ <script src="js/icons.js"></script>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/t-line.js"></script>
+ <script src="js/jquery.rotate.min.js"></script>
+ <link href="css/navshow.css" rel="stylesheet" />
+ <script src="js/navshow.js"></script>
+ <script src="js/nav.js"></script>
+ <link href="css/navshow2.css" rel="stylesheet" />
+ <link href="css/mubu.css" rel="stylesheet" />
+ <script src="js/i-produce.js"></script>
+ 
+   	<link rel="stylesheet" href="css/reveal.css">	
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.reveal.js"></script>
+<style type="text/css">
+
+ #icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+	 z-index:50;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ 	 z-index:50;
+ }
+ 
+  @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.eot');
+      src: url('fonts/fzqk.eot?#iefix') format('embedded-opentype'),
+           url('fonts/fzqk.woff') format('woff'),
+	       url('fonts/fzqk.TTF') format('truetype'),
+	       url('fonts/fzqk.svg#SingleMaltaRegular') format('svg');
+   }
+body{
+  font-family:fzqk;
+ 
+}  
+p{ margin-top:3px;
+   margin-bottom:3px; 
+}
+ 
+#sss 
+{ 
+
+} 
+ 
+#background 
+{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 125%;
+    height: 100%;
+     overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+   overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg3.jpg') no-repeat center center;
+}
+
+#background .bg-photo-2 
+{ 
+  
+} 
+
+.bg-photo-song 
+{ 
+    background:url('images/bg-song.png') no-repeat center center;
+} 
+.bg-photo-zi 
+{ 
+    background:url('images/bg-zi.png') no-repeat center center;
+} 
+
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+
+#s-song{
+    background:url('images/bg-song.png') no-repeat ;
+    position:absolute;
+    width: 1920px;
+	height: 1080px;
+    display:none;
+	z-index:12;
+}
+
+#s-zhe{
+    background:url('images/bg3.jpg') no-repeat ;
+    position:absolute;
+    width: 1920px;
+    height: 1080px;
+	z-index:13;
+}
+#s-zi{
+    background:url('images/bg-zi.png') no-repeat ;
+    position:absolute;
+    width: 1920px;
+    height: 1080px;
+    z-index:13;
+    display:none;
+}
+
+#s-line{
+    background:url('images/bg-tline2.png') no-repeat ;
+    position:relative;
+    width: 2450px;
+    height: 1080px;
+	z-index:15;
+	
+}
+
+
+
+
+#s-line .niukou{
+     position:absolute;
+     left:15%;
+	 top:22%;
+     height:120px;
+	 width:120px;
+	 opacity:0.6;
+	 display:none;
+	 z-index:31;
+}
+#s-line .niukou2{
+     position:absolute;
+     left:28%;
+	 top:39%;
+     height:120px;
+	 width:120px;
+	 opacity:0.6;
+	 display:none;
+	 z-index:31;
+}
+#s-line .niukou3{
+     position:absolute;
+     left:39%;
+	 top:54%;
+     height:120px;
+	 width:120px;
+	 opacity:0.6;
+	 display:none;
+	 z-index:31;
+}
+#s-line .niukou4{
+     position:absolute;
+	 left:49%;
+	 top:69%;
+     height:120px;
+	 width:120px;
+	 opacity:0.6;
+	 display:none;
+	 z-index:31;
+}
+#msbox{
+     position:absolute;
+     left:17%;
+	 top:30%;
+	 z-index:27;
+	 width:0px;
+	 overflow:hidden;
+}
+#msbox2{
+     position:absolute;
+     left:30%;
+	 top:47%;
+	  z-index:27;
+	 width:0px;
+	 overflow:hidden;
+}
+#msbox3{
+     position:absolute;
+     left:41%;
+	 top:62%;
+	 z-index:27;
+	 width:0px;
+	 overflow:hidden;
+}
+#msbox4{
+     position:absolute;
+     left:51%;
+	 top:77%;
+	 z-index:27;
+	 width:0px;
+	 overflow:hidden;
+}
+#wenzi{
+     position:absolute;
+     left:21%;
+	 top:28%;
+	 z-index:29;
+	  display:none;
+     font-family:'fzqk';
+}
+#wenzi2{
+     position:absolute;
+     left:34%;
+	 top:45%;
+	 z-index:29;
+	  display:none;
+     font-family:'fzqk';
+}
+#wenzi3{
+     position:absolute;
+     left:45%;
+	 top:60%;
+	 z-index:29;
+	  display:none;
+     font-family:'fzqk';
+}
+#wenzi4{
+     position:absolute;
+     left:55%;
+	 top:75%;
+	 z-index:29;
+	  display:none;
+     font-family:'fzqk';
+}
+#shadow{
+     position:absolute;
+     left:14.5%;
+	 top:21%;
+     height:150px;
+	 width:150px;
+	 z-index:30;
+	 display:none;
+}
+#shadow2{
+     position:absolute;
+     left:27.5%;
+	 top:38%;
+     height:150px;
+	 width:150px;
+	 display:none;
+	 z-index:30;
+}
+#shadow3{
+     position:absolute;
+     left:38.5%;
+	 top:53%;
+     height:150px;
+	 width:150px;
+	  display:none;
+	 z-index:30;
+}
+#shadow4{
+     position:absolute;
+	 left:48.5%;
+	 top:68%;
+     height:150px;
+	 width:150px;
+	 z-index:30;
+	 display:none;
+}
+#nian{
+     position:absolute;
+	 left:33%;
+	 top:15%;
+	 font-size:21px;
+	  display:none;
+}
+#nian2{
+     position:absolute;
+	  left:44.2%;
+	 top:15%;
+	 font-size:21px;
+	  display:none;
+}
+#nian3{
+     position:absolute;
+	  left:55.5%;
+	  top:15%;
+	 font-size:21px;
+	  display:none;
+}
+#nian4{
+     position:absolute;
+	 left:66.5%;
+	 top:15%;
+	 font-size:21px;
+	 display:none;
+}
+#nian5{
+     position:absolute;
+	 left:77.5%;
+	 top:15%;
+	 font-size:21px;
+	  display:none;
+}
+#nian6{
+     position:absolute;
+	 left:88.8%;
+	 top:15%;
+	 font-size:21px;
+	   display:none;
+}
+
+.jie1-1{
+     position:absolute;
+	 left:49.3%;
+	 top:30%;
+	 z-index:32;
+	 display:none;
+}
+
+.jie1-2{
+     position:absolute;
+	 left:57.7%;
+	 top:30%;
+	 z-index:32;
+	 display:none;
+}
+.jie2-1{
+     position:absolute;
+	 left:66%;
+	  top:47%;
+	 z-index:32;
+	display:none;
+}
+.jie2-2{
+     position:absolute;
+	  left:77.2%;
+	 top:47%;
+	 z-index:32;
+	display:none;
+}
+.jie3-1{
+     position:absolute;
+	  left:71.6%;
+	 top:62%;
+	 z-index:32;
+	display:none;
+}
+.jie4-1{
+     position:absolute;
+	  left:68.7%;
+	 top:77%;
+	 z-index:32;
+	display:none;
+}
+
+.jie1g-1{
+     position:absolute;
+	 left:46.8%;
+	 top:24%;
+	 z-index:32;
+	 display:none;
+
+}
+.jie1g-2{
+     position:absolute;
+	 left:55.2%;
+	 top:24%;
+	 z-index:32;
+display:none;
+}
+.jie2g-1{
+     position:absolute;
+	 left:63.5%;
+	 top:41%;
+	 z-index:32;
+display:none;
+}
+.jie2g-2{
+     position:absolute;
+	 left:74.6%;
+	 top:41%;
+	 z-index:32;
+display:none;
+}
+.jie3g-1{
+     position:absolute;
+	 left:69%;
+	 top:56%;
+	 z-index:32;
+display:none;
+}
+.jie4g-1{
+     position:absolute;
+	 left:66.2%;
+	 top:71%;
+	 z-index:32;
+display:none;
+}
+
+#rightlogosli{
+
+width:300px;height:150px;
+right:50px;top:50px;
+
+}
+
+.big-link { display:block; margin-top: 100px; text-align: center; font-size: 70px; color: #06f; }
+</style>
+
+<script type="text/javascript">
+$(function(){
+
+setTimeout (function()
+{
+ $(".niukou").fadeIn(1000);
+
+    $(".niukou").animate({     // 按钮缩放;恢复透明度
+      opacity:'1',
+      height:'102px',
+      width:'102px'
+    },1000,function(){
+	 
+	 $("#shadow").fadeIn(1000);  // 阴影显示
+	 $("#wenzi").fadeIn(1500);   // 文字显示 
+   $("#msbox").animate({
+      width:'2450px'
+    },3000);
+    });
+	
+	
+	
+setTimeout (function()      // 绳结显示
+{	
+   $(".jie1-1").fadeIn(900);
+  
+},3000);
+
+setTimeout (function()      // 绳结显示
+{
+   $(".jie1-2").fadeIn(900);
+},3500);  	
+	
+
+var rotation = function (){  // 旋转
+   $(".niukou").rotate({
+      angle:15, 
+      animateTo:360, 
+      callback: rotation,
+      easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+          return c*(t/d)+b;
+      }
+   });
+}
+rotation();
+
+setTimeout (function()    // 停止旋转;纠位
+{
+$(".niukou").stopRotate();
+    $(".niukou").css({"-webkit-transform": "rotateX(0deg);"});
+    $(".niukou").css({"-moz-transform":"rotateX(0deg)"});
+    $(".niukou").css({"-ms-transform":"rotateX(0deg)"});
+    $(".niukou").css({"-o-transform":"rotateX(0deg)"});
+    $(".niukou").css({"transform":"rotateX(0deg)"});
+},9000); 	
+	
+},500); 
+
+});
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+setTimeout (function()
+{
+ $(".niukou2").fadeIn(1000);
+
+    $(".niukou2").animate({
+      opacity:'1',
+      height:'102px',
+      width:'102px'
+       },1000,function(){
+	    $("#shadow2").fadeIn(1000);
+	 $("#wenzi2").fadeIn(1500);
+   $("#msbox2").animate({
+      width:'2450px'
+    },3000);
+    });
+	
+setTimeout (function()      // 绳结显示
+{	
+   $(".jie2-1").fadeIn(900);
+  
+},3000);
+
+setTimeout (function()      // 绳结显示
+{
+   $(".jie2-2").fadeIn(900);
+},3500); 
+	
+	
+	
+var rotation = function (){
+   $(".niukou2").rotate({
+      angle:15, 
+      animateTo:360, 
+      callback: rotation,
+      easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+          return c*(t/d)+b;
+      }
+   });
+}
+rotation();
+
+setTimeout (function()
+{
+$(".niukou2").stopRotate();
+    $(".niukou2").css({"-webkit-transform": "rotateX(0deg);"});
+    $(".niukou2").css({"-moz-transform":"rotateX(0deg)"});
+    $(".niukou2").css({"-ms-transform":"rotateX(0deg)"});
+    $(".niukou2").css({"-o-transform":"rotateX(0deg)"});
+    $(".niukou2").css({"transform":"rotateX(0deg)"});
+},9000); 	
+	
+},1000); 		
+});
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+setTimeout (function()
+{
+ $(".niukou3").fadeIn(1000);
+
+    $(".niukou3").animate({
+      opacity:'1',
+      height:'102px',
+      width:'102px'
+     },1000,function(){
+	   $("#shadow3").fadeIn(1000);
+	  $("#wenzi3").fadeIn(1500);
+   $("#msbox3").animate({
+      width:'2450px'
+    },3000);
+    });
+	
+	setTimeout (function()      // 绳结显示
+{	
+   $(".jie3-1").fadeIn(900);
+  
+},3000);
+	
+var rotation = function (){
+   $(".niukou3").rotate({
+      angle:15, 
+      animateTo:360, 
+      callback: rotation,
+      easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+          return c*(t/d)+b;
+      }
+   });
+}
+rotation();
+
+setTimeout (function()
+{
+$(".niukou3").stopRotate();
+    $(".niukou3").css({"-webkit-transform": "rotateX(0deg);"});
+    $(".niukou3").css({"-moz-transform":"rotateX(0deg)"});
+    $(".niukou3").css({"-ms-transform":"rotateX(0deg)"});
+    $(".niukou3").css({"-o-transform":"rotateX(0deg)"});
+    $(".niukou3").css({"transform":"rotateX(0deg)"});
+},9000); 	
+	
+},1000); 		
+});
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+setTimeout (function()
+{
+ $(".niukou4").fadeIn(1000);
+
+    $(".niukou4").animate({
+      opacity:'1',
+      height:'102px',
+      width:'102px'
+       },1000,function(){
+	     $("#shadow4").fadeIn(1000);
+	    $("#wenzi4").fadeIn(1500);
+   $("#msbox4").animate({
+      width:'2450px'
+    },3000);
+    });
+	
+	setTimeout (function()      // 绳结显示
+{	
+   $(".jie4-1").fadeIn(900);
+  
+},3000);
+	
+var rotation = function (){
+   $(".niukou4").rotate({
+      angle:15, 
+      animateTo:360, 
+      callback: rotation,
+      easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+          return c*(t/d)+b;
+      }
+   });
+}
+rotation();
+
+setTimeout (function()
+{
+$(".niukou4").stopRotate();
+    $(".niukou4").css({"-webkit-transform": "rotateX(0deg);"});
+    $(".niukou4").css({"-moz-transform":"rotateX(0deg)"});
+    $(".niukou4").css({"-ms-transform":"rotateX(0deg)"});
+    $(".niukou4").css({"-o-transform":"rotateX(0deg)"});
+    $(".niukou4").css({"transform":"rotateX(0deg)"});
+},9000); 	
+	
+},500); 		
+});
+
+</script>
+<!--背景移动><-->
+<script type="text/javascript">
+
+
+
+
+//背景移动
+$(function(){
+
+
+setTimeout (function()
+{
+ $("#background").animate({left:'-25%'
+ },2500);
+ 
+
+ setTimeout (function()
+{
+ 
+  $("#background").animate({left:'0px'
+ },3500);
+ 
+  },3000);
+ 
+ 
+ 
+ },2300);
+ 
+});
+</script>
+
+
+
+
+
+<!--松树 文字 移动><-->
+<script type="text/javascript">
+$(function(){
+setTimeout (function()
+{
+
+ // $("#s-zhe").animate({
+ //    height:'0px'
+ //  },5000);
+
+  $("#s-song").fadeIn(2000); // 松显示  
+  
+  
+  
+	 setTimeout (function()   // 年份显示  
+{  
+ $("#nian").fadeIn(300,function(){
+ $("#nian").animate({
+        left:'35%',
+	    top:'18%'
+    });
+});
+ },500);
+ 	 setTimeout (function()
+{  $("#nian2").fadeIn(300,function(){
+ $("#nian2").animate({
+        left:'46.2%',
+	    top:'18%'
+    });
+});
+ },900);
+ 	 setTimeout (function()
+{  $("#nian3").fadeIn(300,function(){
+ $("#nian3").animate({
+        left:'57.5%',
+	    top:'18%'
+    });
+});
+ },1300);
+ 	 setTimeout (function()
+{  $("#nian4").fadeIn(300,function(){
+ $("#nian4").animate({
+        left:'68.5%',
+	    top:'18%'
+    });
+});
+ },1700);
+ 
+ setTimeout (function()
+{  $("#nian5").fadeIn(300,function(){
+ $("#nian5").animate({
+        left:'79.5%',
+	    top:'18%'
+    });
+});
+ },2100);
+ 
+  setTimeout (function()
+{  $("#nian6").fadeIn(300,function(){
+ $("#nian6").animate({
+        left:'90.8%',
+	    top:'18%'
+    });
+});
+ },2500);
+ 
+ 	 
+ },2000);
+ 
+});
+</script>
+
+<!--logo><-->
+<script type="text/javascript">
+$(function(){
+setTimeout (function()
+{
+  $("#s-zi").fadeIn(2000);
+$("#fft").fadeIn(2000);
+ },7500);
+ 
+});
+</script>
+
+<!--绳结><-->
+<script type="text/javascript">
+$(function(){
+
+  $(".jie1-1").mouseover(function(){
+    $(".jie1-1").css("display","none");
+	 $(".jie1g-1").css("display","block");
+  });
+    $(".jie1g-1").mouseout(function(){
+  $(".jie1-1").css("display","block");
+	 $(".jie1g-1").css("display","none");
+  });
+  
+  
+   $(".jie1-2").mouseover(function(){
+    $(".jie1-2").css("display","none");
+	 $(".jie1g-2").css("display","block");
+  });
+    $(".jie1g-2").mouseout(function(){
+  $(".jie1-2").css("display","block");
+	 $(".jie1g-2").css("display","none");
+  });
+
+  $(".jie2-1").mouseover(function(){
+    $(".jie2-1").css("display","none");
+	 $(".jie2g-1").css("display","block");
+  });
+    $(".jie2g-1").mouseout(function(){
+  $(".jie2-1").css("display","block");
+	 $(".jie2g-1").css("display","none");
+  });
+
+  $(".jie2-2").mouseover(function(){
+    $(".jie2-2").css("display","none");
+	 $(".jie2g-2").css("display","block");
+  });
+    $(".jie2g-2").mouseout(function(){
+  $(".jie2-2").css("display","block");
+	 $(".jie2g-2").css("display","none");
+  });
+
+
+  $(".jie3-1").mouseover(function(){
+    $(".jie3-1").css("display","none");
+	 $(".jie3g-1").css("display","block");
+  });
+    $(".jie3g-1").mouseout(function(){
+  $(".jie3-1").css("display","block");
+	 $(".jie3g-1").css("display","none");
+  });
+  
+  
+  
+   $(".jie4-1").mouseover(function(){
+    $(".jie4-1").css("display","none");
+	 $(".jie4g-1").css("display","block");
+  });
+    $(".jie4g-1").mouseout(function(){
+  $(".jie4-1").css("display","block");
+	 $(".jie4g-1").css("display","none");
+  });
+    
+});
+</script>
+
+<script type="text/javascript">
+function getMousePos(event) {
+            var e = event || window.event;
+            var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+            var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+            var x = e.pageX || e.clientX + scrollX;
+            var y = e.pageY || e.clientY + scrollY;
+            //alert('x: ' + x + '\ny: ' + y);
+            return { 'x': x, 'y': y };
+   }
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#scroll").mouseover(function(){
+
+  $("#background").animate({left:'-20%'
+ },2500);
+
+  });
+   $("#scroll2").mouseover(function(){
+  $("#background").animate({left:'0'
+ },2000);
+  });
+  
+  
+});
+</script>
+
+</head>
+
+<body >
+<div id="sss">
+<div id="background">
+
+<div class="bg-photo bg-photo-1" style="display: block;">
+
+
+
+<div class="bg-photo bg-photo-2" style="display: block;">
+
+<div id="i-totaltime" >	  <!--缩放><-->	
+   
+	 <div id="s-song"></div>
+
+	  <div id="s-zi"></div>
+       <div id="s-line">
+	    
+			   <!--4个纽扣><-->	
+                <img src="images/nk1.png" class="niukou" >
+			    <img src="images/nk2.png" class="niukou2" >
+			    <img src="images/nk3.png" class="niukou3" >
+                <img src="images/nk4.png" class="niukou4" >
+			   <!--4个麻绳><-->	
+		       <div id="msbox"><img src="images/j-line.png" class="masheng" > </div>
+			   <div id="msbox2"><img src="images/j-line.png" class="masheng" > </div>
+			   <div id="msbox3"><img src="images/j-line.png" class="masheng" > </div>
+			   <div id="msbox4"><img src="images/j-line.png" class="masheng" > </div>
+			   
+			   <!--4个文字描述><-->	
+		       <p id="wenzi">蜜蜡版块大事记</p>
+               <p id="wenzi2">紫砂壶板块筹备</p> 			   
+			   <p id="wenzi3">素食文化</p>
+               <p id="wenzi4">更多板块筹备</p> 	
+			   
+			   <!--4个阴影><-->	
+			    <img src="images/nk-shadow.png" id="shadow" >
+                <img src="images/nk-shadow.png" id="shadow2" >
+                <img src="images/nk-shadow.png" id="shadow3" >
+                <img src="images/nk-shadow.png" id="shadow4" >
+				
+			   <!--年份><-->	
+		       <p id="nian">2013</p>
+               <p id="nian2">2014</p> 			   
+			   <p id="nian3">2015</p>
+               <p id="nian4">2016</p> 
+			   <p id="nian5">2017</p> 
+			   <p id="nian6">2018</p> 
+			    
+				<!--n个绳结><-->	
+			    <a><img src="images/jie.png" class="jie1-1" ></a>
+			    <a><img src="images/jie.png" class="jie1-2" ></a>
+				<a><img src="images/jie.png" class="jie2-1" ></a>
+			    <a><img src="images/jie.png" class="jie2-2" ></a>
+				<a><img src="images/jie.png" class="jie3-1" ></a>
+			    <a><img src="images/jie.png" class="jie4-1" ></a>
+				  
+				<!--n个绳结gif><-->	
+			   
+		 <a href="#" class="big-link" data-reveal-id="myModal">
+		      <img src="images/jie.gif" class="jie1g-1"  width="150" height="150"></a>
+				 <a><img src="images/jie.gif" class="jie1g-2"  width="150" height="150"></a>
+				  <a><img src="images/jie.gif" class="jie2g-1"  width="150" height="150"></a>
+				   <a><img src="images/jie.gif" class="jie2g-2"  width="150" height="150"></a>
+				    <a><img src="images/jie.gif" class="jie3g-1"  width="150" height="150"></a>
+					 <a><img src="images/jie.gif" class="jie4g-1"  width="150" height="150"></a>
+			    
+			   
+		 </div>
+    
+	
+
+		
+</div>		
+		
+<!--幕布界面><-->	
+<div id="mubusfie">
+	<div id="mubusf">		
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall" style="margin-left:15%;">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+ </div>
+  </div>
+ <!--幕布界面><-->		
+
+		<!--右测滚动><-->	
+<div id="scroll" style="position:fixed;top:0px;right:0px; width:50px;height:100%;z-index:200;">
+</div>	
+<div id="scroll2" style="position:fixed;top:0px;left:0px; width:50px;height:100%;z-index:200;">
+
+</div>				
+
+<!-- you上角nav><-->	
+<div id="fft" style="position:fixed;top:50px;right:50px; display:none;">
+<div id="z-nav">
+<div id="rightlogosli">
+<div id="logo"><img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>	
+		
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->		
+		
+	
+		
+	</div>			
+</div>	
+
+</div>
+</div>
+
+<!--弹框><-->	
+<div id="myModal" class="reveal-modal">
+			<h1>jquery导出层</h1>
+			<p>This is a default modal in all its glory, but any of the styles here can easily be changed in the CSS.</p>
+			<a class="close-reveal-modal">&#215;</a>
+		</div>
+
+</body>
+</html>

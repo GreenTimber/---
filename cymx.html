@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>尘焰美学</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/i-produce.js"></script>
+<script src="js/nav.js"></script>
+<link href="css/navshow2.css" rel="stylesheet" />
+<link href="css/mubu.css" rel="stylesheet" />
+<style type="text/css">
+
+ #icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+ 
+ #iconm{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#iconm:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+ 
+ @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.TTF') format('truetype');
+   }
+   
+ .ppsy{
+   width:600px;height:100%;
+		margin:0 auto;
+		text-align:center;
+		margin-top:50px;
+   }
+   
+   
+ #z {
+ text-align:center;
+ width:30px;
+ font-family:fzqk;
+ word-wrap:break-word;
+ letter-spacing:30px;
+ font-size:16pt;
+ }
+ 
+ #t{
+ text-align:center;
+ width:30px;
+ font-family:fzqk;
+ word-wrap:break-word;
+ letter-spacing:80px;
+ font-size:24pt;
+ color:#525B41;
+ float:left;margin-left:20px;
+ }
+ 
+ #c{
+ text-align:center;
+ width:30px;
+ font-family:fzqk;
+ word-wrap:break-word;
+ letter-spacing:30px;
+ margin-top:500px;
+ float:left;margin-left:20px;
+ }
+
+ 
+ 
+ .p1
+{
+	position:relative;
+	animation:mymove1 2s infinite;
+	animation-iteration-count:1;
+}
+.p2
+{
+	position:relative;
+	animation:mymove2 2s infinite;
+	animation-iteration-count:1;
+}
+.p3
+{
+	position:relative;
+	animation:mymove3 2s infinite;
+	animation-iteration-count:1;
+}
+.p4
+{
+	position:relative;
+	animation:mymove4 2s infinite;
+	animation-iteration-count:1;
+}
+.p5
+{
+	position:relative;
+	animation:mymove5 2s infinite;
+	animation-iteration-count:1;
+}
+.p6
+{
+	position:relative;
+	animation:mymove6 2s infinite;
+	animation-iteration-count:1;
+}
+ .p7
+{
+	position:relative;
+	animation:mymove7 2s infinite;
+	animation-iteration-count:1;
+}
+ @keyframes mymove1
+{
+	from {top:100px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove2
+{
+	from {top:150px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove3
+{
+	from {top:200px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove4
+{
+	from {top:250px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove5
+{
+	from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove6
+{
+	from {top:350px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove7
+{
+	from {bottom:-350px;opacity: 0;}
+	to {bottom:0px;opacity: 1;}
+	
+}
+body{
+
+}
+
+
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg2.jpg') no-repeat center center;
+} 
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+
+</style>
+</head>
+<body >
+<div id="background">
+<div class="bg-photo bg-photo-1" style="display: block;">
+
+<div id="i-total" >	
+<div style="margin:0px auto;width:132px;height:93px;margin-top:160px;">
+<img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+
+<div class="ppsy">
+<div style="float:left;margin-top:40px;">
+
+<div class="p1" id="z" style="float:left;">享受生活的诗意︒</div>
+<div class="p1" id="z" style="float:left;">将这些自然微观的表现出来︒细枝末节的温暖︐</div>
+<div class="p1" id="z" style="float:left;">并切实的感受生活的细节︐通过创作以诗意的方式</div>
+<div class="p1" id="z" style="float:left;">俯首见自然︐热爱生活︐微观自然之物之景︐</div>
+<div class="p1" id="z" style="float:left;">以创造的方式去寻根，传承中国美学︒</div>
+<div class="p1" id="z" style="float:left;">设计随形而制︐无为而制才能至︒以现代的手法来怀旧︐</div>
+</div>
+<div  id="t" class="p1">尘焰美学</div>
+
+<div style="float:right;">
+<div style="margin-top:40px;float:left;">
+
+<div class="p1" id="z" style="float:left;">传播幸福︐营造和谐家庭︒</div>
+<div class="p1" id="z" style="float:left;">尘焰是以传播尘焰之道文化︐</div>
+<div class="p1" id="z" style="float:left;">是幸福生活的象征︒</div>
+<div class="p1" id="z" style="float:left;">在几千年来蜜蜡被赋予了很多对生活的美好期许︐</div>
+
+</div>
+<div id="t" class="p1" style="float:left;font-size:24pt;color:#525B41;width:30px;">品牌使命</div>
+</div>
+<div id="c" class="p1"><div id="iconm" style="padding-top:50px;padding-left: 33px;">
+<a href="slider.html"><img src="images/ldbutton.png" ></img></a>
+</div></div>
+
+
+
+</div>
+
+
+</div>
+
+<!--幕布界面><-->	
+ <div id="mubusf">
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+ </div>
+ <!--幕布界面><-->	
+
+
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>尘焰美学</title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/i-produce.js"></script>
+ <script src="js/navshow.js"></script>
+ <script src="js/icons.js"></script>
+ <script src="js/nav.js"></script>
+ <link href="css/navshow2.css" rel="stylesheet" />
+ <link href="css/navshow.css" rel="stylesheet" />
+<link href="css/mubus.css" rel="stylesheet" />
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+
+ <link href="css/navshow.css" rel="stylesheet" />
+<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
+<script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="lib/hash.js"></script>
+<style>
+body{
+
+
+}
+
+
+
+  @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.eot');
+      src: url('fonts/fzqk.eot?#iefix') format('embedded-opentype'),
+          
+	       url('fonts/fzqk.TTF') format('truetype'),
+	       url('fonts/fzqk.svg#SingleMaltaRegular') format('svg');
+   }
+
+
+
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg.jpg') no-repeat center center;
+} 
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+#icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+</style>
+
+
+</head>
+<body>
+<body >
+<div id="background">
+
+<div class="bg-photo bg-photo-1" style="display: block;">
+
+
+<div id="canvas">
+
+
+
+<div class="magazine-viewport">
+	<div class="container">
+		<div class="magazine">
+			<!-- Next button -->
+			<div ignore="1" class="next-button"></div>
+			<!-- Previous button -->
+			<div ignore="1" class="previous-button"></div>
+		</div>
+	</div>
+	<div class="bottom">
+		<div id="slider-bar" class="turnjs-slider">
+			<div id="slider"></div>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+
+function loadApp() {
+
+ 	$('#canvas').fadeIn(1000);
+
+ 	var flipbook = $('.magazine');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+	
+	// Create the flipbook
+
+	flipbook.turn({
+			
+			// Magazine width
+
+			width: 922,
+
+			// Magazine height
+
+			height: 600,
+
+			// Duration in millisecond
+
+			duration: 1000,
+
+			// Enables gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true,
+
+			// Elevation from the edge of the flipbook when turning a page
+
+			elevation: 50,
+
+			// The number of pages
+
+			pages: 8,
+
+			// Events
+
+			when: {
+				turning: function(event, page, view) {
+					
+					var book = $(this),
+					currentPage = book.turn('page'),
+					pages = book.turn('pages');
+			
+					// Update the current URI
+
+					Hash.go('page/' + page).update();
+
+					// Show and hide navigation buttons
+
+					disableControls(page);
+
+				},
+
+				turned: function(event, page, view) {
+
+					disableControls(page);
+
+					$(this).turn('center');
+
+					$('#slider').slider('value', getViewNumber($(this), page));
+
+					if (page==1) { 
+						$(this).turn('peel', 'br');
+					}
+
+				},
+
+				missing: function (event, pages) {
+
+					// Add pages that aren't in the magazine
+
+					for (var i = 0; i < pages.length; i++)
+						addPage(pages[i], $(this));
+
+				}
+			}
+
+	});
+
+	// Zoom.js
+
+	$('.magazine-viewport').zoom({
+		flipbook: $('.magazine'),
+
+		max: function() { 
+			
+			return largeMagazineWidth()/$('.magazine').width();
+
+		}, 
+
+		when: {
+			swipeLeft: function() {
+
+				$(this).zoom('flipbook').turn('next');
+
+			},
+
+			swipeRight: function() {
+				
+				$(this).zoom('flipbook').turn('previous');
+
+			},
+
+			resize: function(event, scale, page, pageElement) {
+
+				if (scale==1)
+					loadSmallPage(page, pageElement);
+				else
+					loadLargePage(page, pageElement);
+
+			},
+
+			zoomIn: function () {
+
+				$('#slider-bar').hide();
+				$('.made').hide();
+				$('.magazine').removeClass('animated').addClass('zoom-in');
+				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+				
+				if (!window.escTip && !$.isTouch) {
+					escTip = true;
+
+					$('<div />', {'class': 'exit-message'}).
+						html('<div>Press ESC to exit</div>').
+							appendTo($('body')).
+							delay(2000).
+							animate({opacity:0}, 500, function() {
+								$(this).remove();
+							});
+				}
+			},
+
+			zoomOut: function () {
+
+				$('#slider-bar').fadeIn();
+				$('.exit-message').hide();
+				$('.made').fadeIn();
+				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+
+				setTimeout(function(){
+					$('.magazine').addClass('animated').removeClass('zoom-in');
+					resizeViewport();
+				}, 0);
+
+			}
+		}
+	});
+
+	// Zoom event
+
+	if ($.isTouch)
+		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+	else
+		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+
+	// Using arrow keys to turn the page
+
+	$(document).keydown(function(e){
+
+		var previous = 37, next = 39, esc = 27;
+
+		switch (e.keyCode) {
+			case previous:
+
+				// left arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case next:
+
+				//right arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case esc:
+				
+				$('.magazine-viewport').zoom('zoomOut');	
+				e.preventDefault();
+
+			break;
+		}
+	});
+
+	// URIs - Format #/page/1 
+
+	Hash.on('^page\/([0-9]*)$', {
+		yep: function(path, parts) {
+			var page = parts[1];
+
+			if (page!==undefined) {
+				if ($('.magazine').turn('is'))
+					$('.magazine').turn('page', page);
+			}
+
+		},
+		nop: function(path) {
+
+			if ($('.magazine').turn('is'))
+				$('.magazine').turn('page', 1);
+		}
+	});
+
+
+	$(window).resize(function() {
+		resizeViewport();
+	}).bind('orientationchange', function() {
+		resizeViewport();
+	});
+
+	// Regions
+
+	if ($.isTouch) {
+		$('.magazine').bind('touchstart', regionClick);
+	} else {
+		$('.magazine').click(regionClick);
+	}
+
+	// Events for the next button
+
+	$('.next-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('next-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('next-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('next-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('next-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('next');
+
+	});
+
+	// Events for the next button
+	
+	$('.previous-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('previous-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('previous-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('previous-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('previous-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('previous');
+
+	});
+
+
+	// Slider
+
+	$( "#slider" ).slider({
+		min: 1,
+		max: numberOfViews(flipbook),
+
+		start: function(event, ui) {
+
+			if (!window._thumbPreview) {
+				_thumbPreview = $('<div />', {'class': 'thumbnail'}).html('<div></div>');
+				setPreview(ui.value);
+				_thumbPreview.appendTo($(ui.handle));
+			} else
+				setPreview(ui.value);
+
+			moveBar(false);
+
+		},
+
+		slide: function(event, ui) {
+
+			setPreview(ui.value);
+
+		},
+
+		stop: function() {
+
+			if (window._thumbPreview)
+				_thumbPreview.removeClass('show');
+			
+			$('.magazine').turn('page', Math.max(1, $(this).slider('value')*2 - 2));
+
+		}
+	});
+
+	resizeViewport();
+
+	$('.magazine').addClass('animated');
+
+}
+
+// Zoom icon
+
+ $('.zoom-icon').bind('mouseover', function() { 
+ 	
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).addClass('zoom-icon-in-hover');
+
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).addClass('zoom-icon-out-hover');
+ 
+ }).bind('mouseout', function() { 
+ 	
+ 	 if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).removeClass('zoom-icon-in-hover');
+ 	
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).removeClass('zoom-icon-out-hover');
+
+ }).bind('click', function() {
+
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$('.magazine-viewport').zoom('zoomIn');
+ 	else if ($(this).hasClass('zoom-icon-out'))	
+		$('.magazine-viewport').zoom('zoomOut');
+
+ });
+
+ $('#canvas').hide();
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['lib/turn.min.js'],
+	nope: ['lib/turn.html4.min.js', 'css/jquery.ui.html4.css'],
+	both: ['lib/zoom.min.js', 'css/jquery.ui.css', 'js/magazine.js', 'css/magazine.css'],
+	complete: loadApp
+});
+
+</script>
+
+
+
+<!--幕布界面><-->	
+ 
+ <div id="mubusf">
+ <div id="mubusf-slider">
+ <div id="bluebgs" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="qualls">
+ <div id="qus" class="p1s"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+ <div id="qus" class="p2s"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+ <div id="qus" class="p3s"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qus" class="p4s"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+  </div>
+  </div>
+ <!--幕布界面><-->	
+
+
+<!--左上角nav><-->	
+
+<div id="z-nav"  >
+<div id="ffs">
+<div id="rightlogo">
+<div id="logo"><img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+</div>
+</div>
+</div>
+	
+		
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shieldsli()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+
+
+
+		
+</div>	
+</div>		
+</body>
+</html>

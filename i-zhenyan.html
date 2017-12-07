@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>箴言</title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/i-produce.js"></script>
+ <script src="js/navshow.js"></script>
+ <script src="js/icons.js"></script>
+ <link href="css/navshow.css" rel="stylesheet" />
+  <link href="css/navshow2.css" rel="stylesheet" />
+  <link href="css/mubu.css" rel="stylesheet" />
+<script src="js/nav.js"></script>
+<link href="" rel="stylesheet" />
+<script src=""></script>
+<style type="text/css">
+
+ #icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+ 
+
+
+ @keyframes mymove0
+{
+	from {top:100px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+
+
+
+  @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.eot');
+      src: url('fonts/fzqk.eot?#iefix') format('embedded-opentype'),
+           url('fonts/fzqk.woff') format('woff'),
+	       url('fonts/fzqk.TTF') format('truetype'),
+	       url('fonts/fzqk.svg#SingleMaltaRegular') format('svg');
+   }
+body{
+  font-family:fzqk;
+}  
+p{ margin-top:3px;
+   margin-bottom:3px; 
+}
+ 
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg2.jpg') no-repeat center center;
+} 
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+
+
+#title{
+   margin-top:30px;
+	width:100%;
+
+}
+#title .text{
+    width:30px;
+	font-size:20pt;
+	font-family:fzqk;
+	z-index:20;
+	text-align:center;
+    margin:0 auto;
+}
+#title .ren{
+    width:30px;
+    margin:0 auto;
+
+}
+
+#content{
+   position: absolute;  bottom: 31%; 
+   right:11%;
+   font-family:fzqk;
+   font-size:18px;
+
+}
+
+#content .text{
+   width:315px;
+
+}
+
+#image{
+  width:100%;
+  margin-top:40px;
+}
+#image .showpic{
+  margin:0 auto;
+  width:663px;
+  height:400px;
+}
+
+#description{
+ margin-top:20px;
+ width:100% ;
+ height:215px;
+ 
+ 	position:relative;
+	animation:mymove0 2s infinite;
+	animation-iteration-count:1;
+ 
+ 
+}
+#description .content{
+ margin:0 auto;
+ width:663px ;
+
+ height:100%;
+ font-size:17px
+}
+#description .title{
+ margin-right:30px;
+ float:right;
+ width:3% ;
+
+ height:100%;
+   writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+}
+
+#description .title-des{
+ float:right;
+ display:none;
+ color:#8F8885;
+}
+
+#description .pic{
+ margin-right:10px;
+ float:right;
+ width:8% ;
+
+ height:100%;
+}
+#description .yinghao{
+ margin-right:10px;
+ float:right;
+ width:40% ;
+line-height:28px;
+ height:100%;
+ font-size:16pt;
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;      
+    writing-mode: vertical-rl;
+	
+}
+#pics:hover{
+transform:scale(1.5,1.5);  
+    transition:all 1s;
+	-webkit-transition:all 1s;
+	-o-transition:all 1s;
+}
+
+</style>
+<script type="text/javascript">
+var fg=2;
+function a(){
+fg++;
+if(fg%2==1){	
+	$("#nav").css({"-webkit-transform": "rotateX(180deg);"});
+    $("#nav").css({"-moz-transform":"rotateX(180deg)"});
+    $("#nav").css({"-ms-transform":"rotateX(180deg)"});
+    $("#nav").css({"-o-transform":"rotateX(180deg)"});
+    $("#nav").css({"transform":"rotateX(180deg)"});
+	$("#navshow").animate({opacity:"1"},"normal");
+	//document.getElementById("navshow").style.display="";
+	}else{
+	 $("#nav").css({"-webkit-transform": "rotateX(180deg);"});
+    $("#nav").css({"-moz-transform":"rotateX(180deg)"});
+    $("#nav").css({"-ms-transform":"rotateX(180deg)"});
+    $("#nav").css({"-o-transform":"rotateX(180deg)"});
+    $("#nav").css({"transform":"rotateX(0deg)"});
+	$("#navshow").animate({opacity:"0"},"normal");
+	//document.getElementById("navshow").style.display="none";
+}
+}
+</script>
+
+</head>
+
+<body>
+<div id="background">
+
+<div class="bg-photo bg-photo-1" style="display: block;">
+<div id="i-total" >	
+ <div id="title">
+			<div class="text">箴言</div><br>
+			<div class="ren"><img src="images/ren.png"></div>
+			
+		</div>
+		
+
+
+		
+ <div id="image">
+		   <div class="showpic"><img src="images/pic-zhenyan.jpg"  width="100%" height="100%" /></div>
+			
+		</div>			
+		
+		
+		
+		
+		
+ <div id="description">
+	 <div class="content">
+			 <div class="title">
+			 <div class="title-des"><img src="images/g-pic.png"  width="15px" height="15px" style="margin-bottom:10px;"  />箴言系列饰品展示</div>
+			 </div>	
+			 <div class="pic"><a href="p-zhenyan.html"><img src="images/y-tu.gif" id="pics" style="width:70px;height:70px;" /></a> </div>
+     
+	 
+
+      <div class="yinghao">
+          箴言是佛珠︑手串系列<br>︐取其佛语禅心︐劝人<br>向善之意︒<br>
+		  箴言同样对应的是修行<br>者︐鼓励普通人以佛门<br>向善之心︐完成尘世中<br>的修行︒
+		
+      </div>
+   		  
+    </div>			
+			
+</div>	
+
+
+ 
+</div>	
+
+<!--幕布界面><-->	
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+ <!--幕布界面><-->	
+ 
+<!--左上角nav><-->	
+<div id="z-nav"  >
+<div id="rightlogo">
+<div id="logo"><img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+</div>
+</div>
+	
+		
+<!--右上角nav><-->	
+<div id="z-nav"  >
+<div id="rightlogo">
+<div id="logo"><img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+</div>
+</div>
+	
+	
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+	
+
+	
+			
+</div>
+
+</div>
+</body>
+</html>

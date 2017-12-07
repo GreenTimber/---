@@ -1,0 +1,222 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+	<title>尘焰之道</title>
+<script src="js/jquery.min.js"></script>
+<script src="js/i-produce.js"></script>
+<script src="js/nav.js"></script>
+<link href="css/navshow2.css" rel="stylesheet" />
+<link href="css/mubu.css" rel="stylesheet" />
+	
+<style type="text/css">
+@font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.TTF') format('truetype');
+   }
+  
+#icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+
+
+#logo{
+width:140px;
+height:140px;
+margin:0 auto;margin-top:150px;
+}
+#content{
+width:1000px;
+height:500px;
+margin:0 auto;margin-top:50px;
+}
+#wenzi{
+  padding-left: 10px;
+font-family:fzqk;
+font-size:40px;
+}
+#wenzilast{
+font-family:fzqk;
+font-size:14pt;
+}
+#group{
+width:166px;height:400px;float:left;text-align:center;
+}
+#grouplast{
+width:100%;height:100px;text-align:center;float:left;
+}
+#spic{
+margin-top:80px;width:60px;height:60px;margin-left:60px;
+}
+a:link { text-decoration: none;color: #AE1E25} 
+a:active { text-decoration:none;color:#AE1E25} 
+a:hover { text-decoration:none;color: #AE1E25} 
+a:visited { text-decoration: none;color: #AE1E25} 
+body{
+
+}
+.dtu:hover{
+background:url('images/y-tu.gif');
+}
+.dtu{
+background:url('images/y-tu.png');
+}
+.dshui:hover{
+background:url('images/y-shui.gif');
+}
+.dshui{
+background:url('images/y-shui.png');
+}
+.djin:hover{
+background:url('images/y-jin.gif');
+}
+.djin{
+background:url('images/y-jin.png');
+}
+.dbag:hover{
+background:url('images/y-bag.gif');
+}
+.dbag{
+background:url('images/y-bag.png');
+}
+.dhuo:hover{
+background:url('images/y-huo.gif');
+}
+.dhuo{
+background:url('images/y-huo.png');
+}
+.dmu:hover{
+background:url('images/y-mu.gif');
+}
+.dmu{
+background:url('images/y-mu.png');
+}
+
+
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg2.jpg') no-repeat center center;
+} 
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+
+
+
+
+</style>
+
+</head>
+<body >
+<div id="background">
+<div class="bg-photo bg-photo-1" style="display: block;">
+
+
+<div id="wx-total" >
+<div id="logo"><img src="images\t-logo.png"></img></div>
+<div id="content">
+<div id="group"><div id="wenzi">木</div><a href="i-heyi.html"><div id="spic" class="dmu"></div></a><div id="spic"><img src="images\t-1.png"></img></div></div>
+<div id="group"><div id="wenzi">火</div><a href="i-angyi.html"><div id="spic" class="dhuo"></div></a><div id="spic"><img src="images\t-2.png"></img></div></div>
+<div id="group"><div id="wenzi">土</div><a href="i-zhenyan.html"><div id="spic" class="dtu"></div></a><div id="spic"><img src="images\t-3.png"></img></div></div>
+<div id="group"><div id="wenzi">金</div><a href="i-youan.html"><div id="spic" class="djin"></div></a><div id="spic"><img src="images\t-4.png"></img></div></div>
+<div id="group"><div id="wenzi">水</div><a href="i-wenxin.html"><div id="spic" class="dshui"></div></a><div id="spic"><img src="images\t-5.png"></img></div></div>
+<div id="group"><div id="wenzi">太极</div><a href=""><div id="spic" class="dbag"></div></a><div id="spic"><img src="images\t-6.png"></img></div></div>
+<div id="grouplast"><div id="wenzilast">八卦结合五行木、火、土、金、水，这五种元素充盈在万物之间，无所不在，它们互相作用，互相发展，维系平衡。</div></div>
+</div>
+
+</div>
+
+
+<!--幕布界面><-->	
+<div id="mubusf">
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+  </div>
+ <!--幕布界面><-->	
+
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+
+
+
+</div>
+</div>
+</body>
+
+</html>

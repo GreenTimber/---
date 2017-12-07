@@ -1,0 +1,504 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+<script src="js/nav.js"></script>
+<link href="css/navshow2.css" rel="stylesheet" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/i-produce.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/vidbg.js"></script>
+<link href="css/mubu.css" rel="stylesheet" />
+
+<style type="text/css">
+
+ #icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+ 
+ @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.TTF') format('truetype');
+   }
+#index-pic{
+height:300px;width:1300px;
+ margin:90px auto 100px auto;
+}
+#shu{
+height:300px;width:70px;float:left;
+margin-left:200px;
+}
+
+.p {    
+          margin: 0 auto;
+            -webkit-border-radius: 110px;
+            border-radius: 110px;
+            -webkit-transition: -webkit-transform 0.5s ease-out;
+            -moz-transition: -moz-transform 0.5s ease-out;
+            -o-transition: -o-transform 0.5s ease-out;
+            -ms-transition: -ms-transform 0.5s ease-out;
+			
+  }
+ .p:hover {
+            -webkit-transform: rotateZ(180deg);
+            -moz-transform: rotateZ(180deg);
+            -o-transform: rotateZ(180deg);
+            -ms-transform: rotateZ(180deg);
+            transform: rotateZ(360deg);
+  }
+.shuli{ padding-top:50px;color:#fbfbe9;
+margin:0 auto;width:30px;font-family:fzqk;text-align:center;font-size:16pt;line-height:30pt;
+ -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+margin-top:60px;
+}
+
+
+.shuli:hover{ 
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1); 
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+}
+
+
+#weix{font-family:fzqk;color:#fbfbe9;font-size:10pt;
+ margin: 0 auto;width:200px;height:100px;text-align:center;
+}
+
+#wenzi{
+width:500px;
+margin: 0 auto;
+font-family:fzqk;
+font-size:13pt;
+margin-top:13pt;
+text-align:center;color:#fbfbe9
+}
+
+
+body{
+overflow:hidden;margin-left:0px;
+background-size:100% 100%;
+}
+a:link { text-decoration: none;color: black} 
+a:active { text-decoration:none;color:black} 
+a:hover { text-decoration:none;color: black} 
+a:visited { text-decoration: none;color: black} 
+
+video{
+position:absolute;
+
+min-height:100%;min-width:100%;
+width:auto;
+height:auto;
+z-index:-9999;
+}
+
+
+.wzdw
+{
+	position:relative;
+	animation:mymove1 2s infinite;
+	animation-iteration-count:1;
+}
+ @keyframes mymove1
+{
+	from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+.wzdw1
+{
+	position:relative;
+	animation:mymove2 2s infinite;
+	animation-iteration-count:1;
+}
+ @keyframes mymove2
+{
+	from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+
+#bluebg{
+
+ background:url(images/bg-blue.jpg);
+ width:100%;height:105%;bottom:-200px;position:absolute;
+ z-index:100;
+ top:200px;
+ 
+ }
+ #quall{
+ margin:0 auto;width:1200px;height:300px;
+ }
+ #qu{
+ float:left;width:300px;height:300px;
+ transition:opacity 0.5s;
+-webkit-transition-timing-function: ease-in-out;
+ }
+ #qu img:hover{
+  opacity:0.5;
+  transition:opacity 0.5s;
+-webkit-transition-timing-function: ease-in-out;
+ }
+ 
+.p1{
+position:relative;
+animation:pmymove1 2s infinite;
+	animation-iteration-count:1;
+}
+@keyframes pmymove1
+{
+from {top:250px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+.p2{
+position:relative;
+animation:pmymove2 2s infinite;
+	animation-iteration-count:1;
+	
+}
+@keyframes pmymove2
+{
+from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+.p3{
+position:relative;
+animation:pmymove3 2s infinite;
+	animation-iteration-count:1;
+}
+@keyframes pmymove3
+{
+from {top:350px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+.p4{
+position:relative;
+animation:pmymove4 2s infinite;
+	animation-iteration-count:1;
+}
+@keyframes pmymove4
+{
+from {top:400px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+#wenzizz{
+ width:20px;height:300px;text-align:center;line-height:40px;margin-top:20px;margin-left:115px;
+ font-family:fzqk;font-size:22pt;color:#000000;
+ }
+ .p1{
+background:url('images/qu-1.png');
+}
+.p1:hover{
+background:url('images/qu-1-1.png');
+  
+}
+   
+.p2{
+background:url('images/qu-2.png');
+}
+.p2:hover{
+background:url('images/qu-1-2.png');
+  
+}
+ 
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+
+} 
+
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+ 
+}
+   
+
+</style>
+
+
+
+</head>
+<body >
+
+<div id="background">
+
+<div class="bg-photo bg-photo-1" style="display: block;">
+
+
+<!--背景音乐-->
+<audio autoplay="autoplay" loop="loop" preload="auto"
+            src="video/bjmusic.mp3">
+      你的浏览器不支持audio标签
+</audio>
+<script type="text/javascript">
+//背景视频
+    jQuery(function($){
+          $('body').vidbg({
+              'mp4': 'video/bgvideo.mp4',
+			 
+          }, {
+            // Options
+            muted: true,
+            loop: true,
+  			overlay: true,
+          });
+      });
+	  
+function btcmove(a){
+ var neimag=document.getElementById("neimag");
+			neimag.style.transition="0.5s ease-out";
+            neimag.style.webkitTransform="scale(1.1)";
+ var neiwz=document.getElementById("neiwz");
+			neiwz.style.transition="0.5s ease-out";
+            neiwz.style.webkitTransform="scale(1.1)";
+}
+function btcout(a){
+var neimag=document.getElementById("neimag");
+			neimag.style.transition="0.5s ease-out";
+		neimag.style.webkitTransform="scale(1.0)";
+var neiwz=document.getElementById("neiwz");
+		neiwz.style.transition="0.5s ease-out";
+		neiwz.style.webkitTransform="scale(1.0)";
+}
+function btcmove1(a){
+ var neimag1=document.getElementById("neimag1");
+			neimag1.style.transition="0.5s ease-out";
+            neimag1.style.webkitTransform="scale(1.1)";
+ var neiwz1=document.getElementById("neiwz1");
+			neiwz1.style.transition="0.5s ease-out";
+            neiwz1.style.webkitTransform="scale(1.1)";
+}
+function btcout1(a){
+var neimag1=document.getElementById("neimag1");
+			neimag1.style.transition="0.5s ease-out";
+		neimag1.style.webkitTransform="scale(1.0)";
+var neiwz1=document.getElementById("neiwz1");
+		neiwz1.style.transition="0.5s ease-out";
+		neiwz1.style.webkitTransform="scale(1.0)";
+}
+function btcmove2(a){
+ var neimag2=document.getElementById("neimag2");
+			neimag2.style.transition="0.5s ease-out";
+            neimag2.style.webkitTransform="scale(1.1)";
+ var neiwz2=document.getElementById("neiwz2");
+			neiwz2.style.transition="0.5s ease-out";
+            neiwz2.style.webkitTransform="scale(1.1)";
+}
+function btcout2(a){
+var neimag2=document.getElementById("neimag2");
+			neimag2.style.transition="0.5s ease-out";
+		neimag2.style.webkitTransform="scale(1.0)";
+var neiwz2=document.getElementById("neiwz2");
+		neiwz2.style.transition="0.5s ease-out";
+		neiwz2.style.webkitTransform="scale(1.0)";
+}
+function btcmove3(a){
+ var neimag3=document.getElementById("neimag3");
+			neimag3.style.transition="0.5s ease-out";
+            neimag3.style.webkitTransform="scale(1.1)";
+ var neiwz3=document.getElementById("neiwz3");
+			neiwz3.style.transition="0.5s ease-out";
+            neiwz3.style.webkitTransform="scale(1.1)";
+}
+function btcout3(a){
+var neimag3=document.getElementById("neimag3");
+			neimag3.style.transition="0.5s ease-out";
+		neimag3.style.webkitTransform="scale(1.0)";
+var neiwz3=document.getElementById("neiwz3");
+		neiwz3.style.transition="0.5s ease-out";
+		neiwz3.style.webkitTransform="scale(1.0)";
+}
+
+var fgsr=1;
+function shieldr(){
+
+fgsr++;time=null;
+if(fgsr%2==0){
+$("#bluebg").animate({opacity:"1"},"normal");
+$("#z-nav2").animate({opacity:"1"},"normal");
+
+var s = document.getElementById("bluebg");
+ clearTimeout(time); 
+   s.style.display = "block";
+var z = document.getElementById("z-nav2");
+ clearTimeout(time); 
+   z.style.display = "block";
+
+	}else{
+	$("#z-nav2").animate({opacity:"0"},"normal");
+	$("#bluebg").animate({opacity:"0"},"normal");
+	var s = document.getElementById("bluebg");
+    time=setTimeout(function(){
+           s.style.display='none';
+      },500);	
+	  
+	var z = document.getElementById("z-nav2");
+    time=setTimeout(function(){
+           s.style.display='none';
+      });  
+	  
+	}
+}
+</script>
+
+<div id="i-total" >	
+
+
+<div style="margin:20px auto;margin-top:3%;width:132px;height:93px;">
+<img src="images/logo.png" style="height:100%;width:100%;"></img></div>
+ <div id="index-pic" class="wzdw">
+	<div id="shu">
+		<a href="cyzd.html"><img class="p" onmousemove="btcmove(this)" onmouseout="btcout(this)" src="images/jin.png" style="position:absolute;width:70px;;height:70px;z-index:20;" ></img><img id="neimag" src="images/jin-1.png" style="position:absolute;width:50px;;height:50px;z-index:10;margin-left:10px;margin-top:10px;"></img></a>
+		<a href="#"><div class="shuli" id="neiwz" >尘焰之道</div></a>
+	</div>
+	
+	<div id="shu">
+		<a href="yytx.html"><img class="p" onmousemove="btcmove1(this)" onmouseout="btcout1(this)" src="images/shan.png" style="position:absolute;width:70px;;height:70px;z-index:20;" ></img><img id="neimag1" src="images/shan-1.png" style="position:absolute;width:50px;;height:50px;z-index:10;margin-left:10px;margin-top:10px;"></img></a>
+		<a href="#"><div class="shuli" id="neiwz1">与焰同行</div></a>
+	</div>
+	
+	<div id="shu">
+		<a href="timeline.html"><img class="p" onmousemove="btcmove2(this)" onmouseout="btcout2(this)" src="images/jing.png" style="position:absolute;width:70px;;height:70px;z-index:20;" ></img><img id="neimag2" src="images/jing-1.png" style="position:absolute;width:50px;;height:50px;z-index:10;margin-left:10px;margin-top:10px;"></img></a>
+		<a href="#"><div class="shuli" id="neiwz2">品牌礼记</div></a>
+	</div>
+	
+	<div id="shu">
+		<a href="cymx.html"><img class="p" onmousemove="btcmove3(this)" onmouseout="btcout3(this)" src="images/mei.png" style="position:absolute;width:70px;;height:70px;z-index:20;" ></img><img id="neimag3" src="images/mei-1.png" style="position:absolute;width:50px;;height:50px;z-index:10;margin-left:10px;margin-top:10px;"></img></a>
+		<a href="#"><div class="shuli" id="neiwz3">尘焰美学</div></a>
+	</div>
+</div>
+
+<div id="weix" class="wzdw1">
+<div style="float:left;"><img style="width:70px;height:70px;"src="images/fuwuhao.png" id="ewcode1"></img><div style="margin-left:0px;">服务号</div></div>
+<div style="float:right;"><img style="width:70px;height:70px;" src="images/dingyuehao.png" id="ewcode2"></img><div style="margin-left:0px;">订阅号</div></div>
+</div>
+
+<div id="wenzi" class="wzdw1">
+上海尘焰文化传播有限公司<br>
+Shanghai ChenYan Culture Communication Co., Ltd.<br>
+<br>
+Tel: 400-756-8899<br>
+Mail: MU@chenyanzhidao.com<br>
+上海市闸北区江场西路299号中铁时代广场2号楼702室<br>
+702,building 2,Lane 299 Jiangchang Road West,<br>
+Zhabei District,Shanghai
+</div>
+
+
+ 
+ </div>
+
+
+
+
+
+
+<!--幕布界面><-->	
+ <div id="mubusf">
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+ </div>
+ <!--幕布界面><-->	
+
+
+
+
+
+
+
+
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shieldr()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:none;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->	
+</div>
+</div>
+		
+</body>
+
+</html>

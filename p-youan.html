@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>佑安</title>
+ <script src="js/jquery.min.js"></script>
+ <script src="js/i-produce.js"></script>
+    <link href="css/navshow2.css" rel="stylesheet" />
+	<link href="css/mubu.css" rel="stylesheet" />
+<script src="js/nav.js"></script>
+<link href="" rel="stylesheet" />
+<script src=""></script>
+<style type="text/css">
+
+ #icon{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute; bottom:1px;z-index:100;
+	-webkit-filter:drop-shadow(3px 3px 3px black);
+	 -webkit-transition: -webkit-transform 0.5s ease-out;
+	 -moz-transition: -moz-transform 0.5s ease-out;
+     -o-transition: -o-transform 0.5s ease-out;
+     -ms-transition: -ms-transform 0.5s ease-out;
+}
+#icon:hover {   
+ transform:scale(1.1); 
+ -webkit-transform:scale(1.1); 
+ -moz-transform:scale(1.1);  
+ -o-transform:scale(1.1);  
+ -ms-transform:scale(1.1);
+ cursor:pointer;
+ -webkit-filter:drop-shadow(3px 3px 3px black);
+ -webkit-transition: -webkit-transform 0.5s;
+ -moz-transition: -moz-transform 0.5s ease-out;
+ -o-transition: -o-transform 0.5s ease-out;
+ -ms-transition: -ms-transform 0.5s ease-out;
+ }
+  #icon2{
+	text-align:center;
+	padding-top:10px;
+	width:80px;height:70px;
+    position: absolute;
+	left:50%;
+	bottom:70px;
+	margin:-100px 0px 0px -40px;
+	opacity:0.5;
+}
+#icon2:hover {   
+opacity:1;
+ }
+
+ .p1
+{
+	position:relative;
+	animation:mymove1 2s infinite;
+	animation-iteration-count:1;
+}
+.p2
+{
+	position:relative;
+	animation:mymove2 2s infinite;
+	animation-iteration-count:1;
+}
+.p3
+{
+	position:relative;
+	animation:mymove3 2s infinite;
+	animation-iteration-count:1;
+}
+.p4
+{
+	position:relative;
+	animation:mymove4 2s infinite;
+	animation-iteration-count:1;
+}
+.p5
+{
+	position:relative;
+	animation:mymove5 2s infinite;
+	animation-iteration-count:1;
+}
+ @keyframes mymove1
+{
+	from {top:100px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove2
+{
+	from {top:150px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove3
+{
+	from {top:200px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove4
+{
+	from {top:250px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+@keyframes mymove5
+{
+	from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+	
+}
+
+
+  @font-face {
+      font-family: 'fzqk';
+      src: url('fonts/fzqk.eot');
+      src: url('fonts/fzqk.eot?#iefix') format('embedded-opentype'),
+           url('fonts/fzqk.woff') format('woff'),
+	       url('fonts/fzqk.TTF') format('truetype'),
+	       url('fonts/fzqk.svg#SingleMaltaRegular') format('svg');
+   }
+body{
+
+}  
+p{ margin-top:3px;
+   margin-bottom:3px; 
+}
+ 
+#background 
+{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC; 
+    display:none\8;
+	z-index:1;
+	
+} 
+#background .bg-photo 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+	z-index:1;
+} 
+
+#background .bg-photo-1 
+{ 
+   background:url('images/bg-youans.gif') no-repeat center center;
+} 
+#background .bg-photo-2 
+{ 
+   background:url('images/sp-youan.png') no-repeat center center;
+}
+#background-ie { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #CBC0BC;
+}
+
+
+
+#title{
+   margin-top:30px;
+	width:100%;
+
+}
+#title .text{
+    width:30px;
+	font-size:20pt;
+	font-family:fzqk;
+	z-index:20;
+	text-align:center;
+    margin:0 auto;
+}
+#title .ren{
+    width:30px;
+    margin:0 auto;
+
+}
+
+#p-content{
+   position: absolute;  bottom:38%; 
+   left:9%;
+   font-family:fzqk;
+  
+   font-size:19px;
+
+}
+
+#p-content .text{
+   width:365px;
+
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+<div id="background">
+
+<div class="bg-photo bg-photo-1" style="display: block;">
+<div class="bg-photo bg-photo-2" style="display: block;">
+<div id="p-total" >	
+ <div id="title">
+			<div class="text">佑安</div><br>
+			<div class="ren"><img src="images/yan.png"></div>
+			
+		</div>
+</div>	
+
+
+ <div id="p-content">
+			<div class="text">
+			
+
+<p   class="p1" style="text-indent:2em"><font face="@Microsoft YahHei">小而美的理想祈愿，随身携，安平乐。</font></p>  
+			</div>
+			
+		</div>	
+		
+	
+<!--幕布界面><-->	
+<div id="mubusf">
+ <div id="bluebg" style="display:none;margin-left: 0px;margin-right: 0px;">
+ <div id="quall">
+ <div id="qu" class="p1"><a href="#"><img src="images/qu-1.png"></img></a><div id="wenzizz">微信</div></div>
+  <div id="qu" class="p2"><a href="http://weibo.com/5845924577/manage" target="_blank" ><img src="images/qu-2.png"></img></a><div id="wenzizz">微博</div></div>
+  <div id="qu" class="p3"><a href="#"><img src="images/qu-3.png"></img></a><div id="wenzizz">以茶会友</div></div>
+  <div id="qu" class="p4"><a href="#"><img src="images/qu-4.png"></img></a><div id="wenzizz">联系我们</div></div>
+ </div>
+ </div>
+  </div>
+ <!--幕布界面><-->		
+	
+
+
+<!--左下角icon><-->	
+<div id="icon">
+<a><img src="images/ldbutton.png" onclick="shield()"></img></a>
+</div>
+<!--左下角><-->	
+<!--左下角icon2><-->	
+<div id="z-nav2" style="display:black;" >
+<div id="rightlogo2">
+<div id="navpic2">
+<div id="nav2" onclick="a2()"><img  src="images/navigation.png" style="height:100%;width:100%;"  ></img></div>
+<div id="navshow2" ><a href="cyzd.html">尘焰之道</a> &nbsp|&nbsp <a href="yytx.html">与焰同行</a> &nbsp|&nbsp  <a href="timeline.html">品牌札记</a> &nbsp|&nbsp  <a href="cymx.html">尘焰美学</a> &nbsp|&nbsp  <a href="index.html">首页</a></div>
+</div>
+</div>
+</div>
+<!--/左下角><-->
+		<!--中间><-->		
+		<div id="icon2">
+				<div class="ico"><a href="wx.html"><img src="images/ldbutton.png" width="60%" height="60%"></a></div>
+		</div>	
+</div>
+</div>
+</div>
+</body>
+</html>

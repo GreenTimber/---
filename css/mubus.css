@@ -1,0 +1,86 @@
+#bluebgs{
+
+ background:url(../images/bg-blue.jpg);
+ width:100%;height:105%;bottom:-200px;position:absolute;
+ z-index:100;
+ top:200px;
+ 
+ }
+ #qualls{
+ margin:0 auto;width:1200px;height:300px;
+ }
+ #qus{
+ float:left;width:300px;height:300px;
+ transition:opacity 0.5s;
+-webkit-transition-timing-function: ease-in-out;
+ }
+ #qus img:hover{
+  opacity:0.5;
+  transition:opacity 0.5s;
+-webkit-transition-timing-function: ease-in-out;
+ }
+ 
+ .p1s{
+position:relative;
+animation:pmymove1 2s infinite;
+	animation-iteration-count:1;
+}
+@keyframes pmymove1
+{
+from {top:250px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+.p2s{
+position:relative;
+animation:pmymove2 2s infinite;
+	animation-iteration-count:1;
+	
+}
+@keyframes pmymove2
+{
+from {top:300px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+.p3s{
+position:relative;
+animation:pmymove3 2s infinite;
+	animation-iteration-count:1;
+}
+@keyframes pmymove3
+{
+from {top:350px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+.p4s{
+position:relative;
+animation:pmymove4 2s infinite;
+	animation-iteration-count:1;
+}
+@keyframes pmymove4
+{
+from {top:400px;opacity: 0;}
+	to {top:0px;opacity: 1;}
+
+}
+#wenzizz{
+ width:20px;height:300px;text-align:center;line-height:40px;margin-top:20px;margin-left:115px;
+ font-family:fzqk;font-size:22pt;color:#000000;
+ }
+ .p1s{
+background:url('../images/qu-1.png');
+}
+.p1s:hover{
+background:url('../images/qu-1-1.png');
+  
+}
+   
+.p2{
+background:url('../images/qu-2.png');
+}
+.p2:hover{
+background:url('../images/qu-1-2.png');
+  
+}
